@@ -8,70 +8,84 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/placeholder.svg?height=800&width=1920"
-            alt="Privacy Policy"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-red-600/20" />
+          <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-red-600/10 rounded-full blur-xl animate-pulse delay-1000" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="font-heading font-black text-4xl md:text-6xl text-white mb-6 text-balance">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-3 mb-8">
+              <Shield className="w-5 h-5 text-primary" />
+              <span className="text-primary font-semibold">Privacy Policy</span>
+            </div>
+
+            <h1 className="font-heading font-black text-5xl md:text-7xl lg:text-8xl text-white mb-8 text-balance leading-tight">
               Privacy{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                Policy
+              <span className="relative">
+                <span className="bg-gradient-to-r from-primary via-red-500 to-red-600 bg-clip-text text-transparent">
+                  Policy
+                </span>
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-red-600 rounded-full" />
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto text-pretty">
-              Your privacy and data security are our top priorities. Learn how we protect and handle your information.
+
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto text-pretty leading-relaxed">
+              Your privacy and data security are our <span className="text-primary font-semibold">top priorities</span>.
+              Learn how we protect and handle your information.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Privacy Overview */}
-      <section className="py-20">
+      <section className="py-24 bg-gradient-to-b from-card/30 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
-            <Card className="bg-card border-primary/20 text-center">
-              <CardContent className="p-6">
-                <Shield className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-white">Data Protection</h3>
+          <div className="grid md:grid-cols-4 gap-8 mb-20">
+            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-6 transition-transform">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-white">Data Protection</h3>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-primary/20 text-center">
-              <CardContent className="p-6">
-                <Lock className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-white">Secure Storage</h3>
+            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-6 transition-transform">
+                  <Lock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-white">Secure Storage</h3>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-primary/20 text-center">
-              <CardContent className="p-6">
-                <Eye className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-white">Transparency</h3>
+            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-6 transition-transform">
+                  <Eye className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-white">Transparency</h3>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-primary/20 text-center">
-              <CardContent className="p-6">
-                <FileText className="w-8 h-8 text-primary mb-3 mx-auto" />
-                <h3 className="font-semibold text-white">Compliance</h3>
+            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-6 transition-transform">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-white">Compliance</h3>
               </CardContent>
             </Card>
           </div>
 
           <div className="max-w-4xl mx-auto prose prose-invert">
-            <div className="text-gray-300 space-y-8">
+            <div className="text-gray-300 space-y-12">
               <div>
-                <p className="text-sm text-gray-400 mb-4">Last updated: December 2024</p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-sm text-gray-400 mb-6">Last updated: December 2024</p>
+                <p className="text-lg md:text-xl leading-relaxed">
                   Stripechat Agency ("we," "our," or "us") is committed to protecting your privacy and ensuring the
                   security of your personal information. This Privacy Policy explains how we collect, use, disclose, and
                   safeguard your information when you use our services.
@@ -79,14 +93,16 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
-                <div className="space-y-4">
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
+                  1. Information We Collect
+                </h2>
+                <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Personal Information</h3>
-                    <p>
+                    <h3 className="font-heading text-xl font-bold text-white mb-3">Personal Information</h3>
+                    <p className="leading-relaxed">
                       We collect personal information that you voluntarily provide to us, including but not limited to:
                     </p>
-                    <ul className="list-disc list-inside mt-2 space-y-1">
+                    <ul className="list-disc list-inside mt-4 space-y-2 text-gray-300">
                       <li>Full name and contact information (email, phone number)</li>
                       <li>Government-issued identification for age verification</li>
                       <li>Banking and payment information for earnings distribution</li>
@@ -96,9 +112,11 @@ export default function PrivacyPage() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Technical Information</h3>
-                    <p>We automatically collect certain technical information, including:</p>
-                    <ul className="list-disc list-inside mt-2 space-y-1">
+                    <h3 className="font-heading text-xl font-bold text-white mb-3">Technical Information</h3>
+                    <p className="leading-relaxed">
+                      We automatically collect certain technical information, including:
+                    </p>
+                    <ul className="list-disc list-inside mt-4 space-y-2 text-gray-300">
                       <li>Device information and browser type</li>
                       <li>IP address and location data</li>
                       <li>Usage patterns and platform interactions</li>
@@ -109,9 +127,11 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
-                <p>We use your information for the following purposes:</p>
-                <ul className="list-disc list-inside mt-4 space-y-2">
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
+                  2. How We Use Your Information
+                </h2>
+                <p className="leading-relaxed">We use your information for the following purposes:</p>
+                <ul className="list-disc list-inside mt-6 space-y-3 text-gray-300">
                   <li>Account creation, verification, and management</li>
                   <li>Providing training, support, and creator development services</li>
                   <li>Processing payments and maintaining financial records</li>
@@ -123,18 +143,18 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
                   3. Information Sharing and Disclosure
                 </h2>
-                <div className="space-y-4">
-                  <p>
+                <div className="space-y-6">
+                  <p className="leading-relaxed">
                     We do not sell, trade, or rent your personal information to third parties. We may share your
                     information only in the following circumstances:
                   </p>
 
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Service Providers</h3>
-                    <p>
+                    <h3 className="font-heading text-xl font-bold text-white mb-3">Service Providers</h3>
+                    <p className="leading-relaxed">
                       We may share information with trusted third-party service providers who assist us in operating our
                       business, such as payment processors, cloud storage providers, and analytics services. These
                       providers are bound by confidentiality agreements.
@@ -142,16 +162,16 @@ export default function PrivacyPage() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Legal Requirements</h3>
-                    <p>
+                    <h3 className="font-heading text-xl font-bold text-white mb-3">Legal Requirements</h3>
+                    <p className="leading-relaxed">
                       We may disclose information when required by law, court order, or government regulation, or to
                       protect our rights, property, or safety.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Platform Partners</h3>
-                    <p>
+                    <h3 className="font-heading text-xl font-bold text-white mb-3">Platform Partners</h3>
+                    <p className="leading-relaxed">
                       Necessary information may be shared with content platforms for account setup and compliance
                       purposes, always in accordance with their privacy policies.
                     </p>
@@ -160,9 +180,11 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">4. Data Security</h2>
-                <p>We implement comprehensive security measures to protect your information:</p>
-                <ul className="list-disc list-inside mt-4 space-y-2">
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">4. Data Security</h2>
+                <p className="leading-relaxed">
+                  We implement comprehensive security measures to protect your information:
+                </p>
+                <ul className="list-disc list-inside mt-6 space-y-3 text-gray-300">
                   <li>End-to-end encryption for sensitive data transmission</li>
                   <li>Secure cloud storage with regular security audits</li>
                   <li>Multi-factor authentication for account access</li>
@@ -173,9 +195,9 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">5. Your Privacy Rights</h2>
-                <p>You have the following rights regarding your personal information:</p>
-                <ul className="list-disc list-inside mt-4 space-y-2">
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">5. Your Privacy Rights</h2>
+                <p className="leading-relaxed">You have the following rights regarding your personal information:</p>
+                <ul className="list-disc list-inside mt-6 space-y-3 text-gray-300">
                   <li>
                     <strong>Access:</strong> Request a copy of the personal information we hold about you
                   </li>
@@ -199,8 +221,8 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">6. Data Retention</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">6. Data Retention</h2>
+                <p className="leading-relaxed">
                   We retain your personal information only as long as necessary to fulfill the purposes outlined in this
                   policy, comply with legal obligations, resolve disputes, and enforce our agreements. Financial records
                   are retained for tax and regulatory compliance purposes as required by law.
@@ -208,8 +230,10 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">7. International Data Transfers</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
+                  7. International Data Transfers
+                </h2>
+                <p className="leading-relaxed">
                   Your information may be transferred to and processed in countries other than your country of
                   residence. We ensure that such transfers comply with applicable data protection laws and implement
                   appropriate safeguards to protect your information.
@@ -217,16 +241,18 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">8. Cookies and Tracking</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
+                  8. Cookies and Tracking
+                </h2>
+                <p className="leading-relaxed">
                   We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns,
                   and improve our services. You can control cookie settings through your browser preferences.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">9. Children's Privacy</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">9. Children's Privacy</h2>
+                <p className="leading-relaxed">
                   Our services are not intended for individuals under 18 years of age. We do not knowingly collect
                   personal information from children under 18. If we become aware that we have collected such
                   information, we will take steps to delete it promptly.
@@ -234,8 +260,10 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">10. Changes to This Policy</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
+                  10. Changes to This Policy
+                </h2>
+                <p className="leading-relaxed">
                   We may update this Privacy Policy from time to time to reflect changes in our practices or legal
                   requirements. We will notify you of any material changes by posting the updated policy on our website
                   and updating the "Last updated" date.
@@ -243,30 +271,34 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">11. Contact Information</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">
+                  11. Contact Information
+                </h2>
+                <p className="leading-relaxed">
                   If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices,
                   please contact us:
                 </p>
-                <div className="mt-4 p-4 bg-card rounded-lg border border-primary/20">
-                  <p>
-                    <strong>Email:</strong> privacy@stripchatagency.in
-                  </p>
-                  <p>
-                    <strong>Phone:</strong> +91 8700955207
-                  </p>
-                  <p>
-                    <strong>WhatsApp:</strong> +91 8700955207
-                  </p>
-                  <p>
-                    <strong>Response Time:</strong> Within 48 hours
-                  </p>
+                <div className="mt-6 p-8 bg-gradient-to-br from-card to-card/50 rounded-2xl border border-primary/20">
+                  <div className="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <p>
+                      <strong className="text-white">Email:</strong> privacy@stripchatagency.in
+                    </p>
+                    <p>
+                      <strong className="text-white">Phone:</strong> +91 8700955207
+                    </p>
+                    <p>
+                      <strong className="text-white">WhatsApp:</strong> +91 8700955207
+                    </p>
+                    <p>
+                      <strong className="text-white">Response Time:</strong> Within 48 hours
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white mb-4">12. Governing Law</h2>
-                <p>
+                <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-6">12. Governing Law</h2>
+                <p className="leading-relaxed">
                   This Privacy Policy is governed by and construed in accordance with the laws of India. Any disputes
                   arising from this policy will be subject to the jurisdiction of Indian courts.
                 </p>
