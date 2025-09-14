@@ -4,18 +4,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Users,
-  TrendingUp,
   Shield,
-  Clock,
   ArrowRight,
   Play,
-  CheckCircle,
   Globe,
-  Headphones,
   Sparkles,
   Zap,
   Target,
-  Award,
+  Star,
+  Heart,
+  DollarSign,
+  Calendar,
+  MessageCircle,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -25,48 +25,49 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-50 via-white to-red-100">
+        {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-red-600/20" />
-          {/* Animated geometric shapes */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-red-600/10 rounded-full blur-xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary/5 rounded-full blur-lg animate-bounce" />
+          <div className="absolute top-20 left-10 w-32 h-32 bg-red-200/30 rounded-full blur-xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-red-300/20 rounded-full blur-xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-red-100/40 rounded-full blur-lg animate-bounce" />
+          <div className="absolute top-1/3 right-1/4 w-36 h-36 bg-red-200/25 rounded-full blur-xl animate-pulse delay-500" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-3 mb-6">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span className="text-primary font-semibold">Professional Creator Management</span>
+            <div className="inline-flex items-center space-x-2 bg-red-100 border border-red-200 rounded-full px-6 py-3 mb-6">
+              <Sparkles className="w-5 h-5 text-red-600" />
+              <span className="text-red-700 font-semibold">Professional Creator Management</span>
             </div>
+            <div className="pb-6"></div>
           </div>
 
-          <h1 className="font-heading font-black text-5xl md:text-7xl lg:text-8xl text-white mb-8 text-balance leading-tight">
-            Empowering{" "}
-            <span className="relative">
-              <span className="bg-gradient-to-r from-primary via-red-500 to-red-600 bg-clip-text text-transparent">
-                Digital
-              </span>
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-red-600 rounded-full" />
-            </span>
+          <h1 className="font-heading font-black text-5xl md:text-7xl lg:text-8xl text-gray-900 mb-8 text-balance leading-tight">
+            <span className="text-red-600">STRIPCHAT</span>
             <br />
-            <span className="text-gray-200">Creators</span>
+            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">Agency</span>
           </h1>
 
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto text-pretty leading-relaxed">
-            Build your career as a <span className="text-primary font-semibold">live presenter</span>, educator, or
-            entertainer with professional training,
-            <span className="text-primary font-semibold"> 24/7 support</span>, and transparent income opportunities.
-          </p>
+          <div className="space-y-6 mb-12">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto text-pretty leading-relaxed">
+              Kya aap ek <span className="text-red-600 font-semibold">flexible work-from-home opportunity</span> dhundh
+              rahe ho jahan aapko{" "}
+              <span className="text-red-600 font-semibold">achhi income + freedom + apna schedule</span> mile?
+            </p>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Hum ek STRIPCHAT agency hain aur hum{" "}
+              <span className="text-red-600 font-semibold">female models and creators</span> ko recruit kar rahe hain.
+              Agar aap dedicated aur motivated ho toh yeh aapke liye{" "}
+              <span className="text-red-600 font-semibold">best chance</span> hai.
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-primary to-red-600 hover:from-primary/90 hover:to-red-600/90 text-white px-10 py-6 text-xl font-bold rounded-full shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
+              className="bg-red-600 hover:bg-red-700 text-white px-10 py-6 text-xl font-bold rounded-full shadow-2xl shadow-red-200 hover:shadow-red-300 transition-all duration-300 transform hover:scale-105"
             >
               <a href="https://wa.me/918700955207" target="_blank" rel="noopener noreferrer">
                 <Zap className="mr-3 w-6 h-6" />
@@ -78,7 +79,7 @@ export default function HomePage() {
               asChild
               variant="outline"
               size="lg"
-              className="border-2 border-primary/50 text-white hover:bg-primary/10 hover:border-primary px-10 py-6 text-xl font-semibold bg-transparent rounded-full backdrop-blur-sm"
+              className="border-2 border-red-600 text-red-600 hover:bg-red-50 hover:border-red-700 px-10 py-6 text-xl font-semibold bg-transparent rounded-full"
             >
               <Link href="/about">
                 <Play className="mr-3 w-6 h-6" />
@@ -90,115 +91,179 @@ export default function HomePage() {
           {/* Trust indicators */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
                 500+
               </div>
-              <div className="text-gray-400 font-medium">Active Creators</div>
+              <div className="text-gray-600 font-medium">Active Creators</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
                 24/7
               </div>
-              <div className="text-gray-400 font-medium">Support Available</div>
+              <div className="text-gray-600 font-medium">Support Available</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
                 100%
               </div>
-              <div className="text-gray-400 font-medium">Privacy Protected</div>
+              <div className="text-gray-600 font-medium">Privacy Protected</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-primary mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
                 ₹50K+
               </div>
-              <div className="text-gray-400 font-medium">Avg. Monthly Income</div>
+              <div className="text-gray-600 font-medium">Avg. Monthly Income</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-b from-card/30 to-background">
+      {/* About Section */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-3 mb-6">
-              <Target className="w-5 h-5 text-primary" />
-              <span className="text-primary font-semibold">Our Services</span>
+            <div className="inline-flex items-center space-x-2 bg-red-100 border border-red-200 rounded-full px-6 py-3 mb-6">
+              <Heart className="w-5 h-5 text-red-600" />
+              <span className="text-red-700 font-semibold">About STRIPCHAT Agency</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-6xl font-black text-white mb-6">What We Offer</h2>
-            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive support to build and grow your digital creator career
+            <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">Humara Mission</h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+              Hum female creators ko empower karte hain digital content creation mein successful career banane ke liye
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Professional Training</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Complete technical setup, audience building strategies, aur professional presentation skills ki
+                  training
+                </p>
+              </div>
+              <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">24/7 Support System</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Round-the-clock technical aur emotional support, kyunki aapki success hamari priority hai
+                </p>
+              </div>
+              <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Transparent Income</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  No hidden charges, clear payment structure, aur guaranteed weekly payouts
+                </p>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-red-100 to-red-200 rounded-3xl p-12 text-center">
+              <div className="w-24 h-24 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-8">
+                <Users className="w-12 h-12 text-white" />
+              </div>
+              <h3 className="font-heading text-3xl font-bold text-gray-900 mb-6">Join Our Community</h3>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-red-600 mb-2">500+</div>
+                  <div className="text-sm text-gray-700">Active Models</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-red-600 mb-2">₹2L+</div>
+                  <div className="text-sm text-gray-700">Highest Monthly</div>
+                </div>
+              </div>
+              <Button asChild className="bg-red-600 hover:bg-red-700 text-white rounded-full px-8">
+                <a href="https://wa.me/918700955207" target="_blank" rel="noopener noreferrer">
+                  Join Community
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-24 bg-red-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center space-x-2 bg-white border border-red-200 rounded-full px-6 py-3 mb-6">
+              <Target className="w-5 h-5 text-red-600" />
+              <span className="text-red-700 font-semibold">Our Services</span>
+            </div>
+            <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">
+              Hum Kya Provide Karte Hain
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+              Complete support system jo aapko successful creator banane mein help karega
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+            <Card className="bg-white border-red-100 hover:border-red-300 transition-all duration-300 group hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white mb-4">Professional Training</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Complete onboarding, technical setup, and audience-building strategies to maximize your success.
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Complete Onboarding</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Technical setup se lekar audience building tak, har step mein professional guidance
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+            <Card className="bg-white border-red-100 hover:border-red-300 transition-all duration-300 group hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                  <TrendingUp className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white mb-4">Career Growth</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Personalized mentoring and growth strategies to help you build a sustainable income stream.
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Income Optimization</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Proven strategies jo aapki earning potential ko maximize karte hain
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+            <Card className="bg-white border-red-100 hover:border-red-300 transition-all duration-300 group hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white mb-4">Privacy & Security</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Complete data protection, legal compliance, and privacy safeguards for your peace of mind.
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Privacy & Security</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Complete data protection aur legal compliance ke saath full privacy guarantee
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+            <Card className="bg-white border-red-100 hover:border-red-300 transition-all duration-300 group hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                  <Clock className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                  <Calendar className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white mb-4">Flexible Schedule</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Work on your own terms with flexible hours that fit your lifestyle and commitments.
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Flexible Schedule</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Apne time pe work karo, koi fixed hours nahi, complete freedom
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+            <Card className="bg-white border-red-100 hover:border-red-300 transition-all duration-300 group hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                  <Headphones className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                  <MessageCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white mb-4">24/7 Support</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Round-the-clock technical and professional support to help you succeed at every step.
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Personal Mentoring</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Dedicated mentor jo aapki growth mein personally involved rahega
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-card to-card/50 border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:transform hover:scale-105">
+            <Card className="bg-white border-red-100 hover:border-red-300 transition-all duration-300 group hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-white mb-4">Global Reach</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Access to international platforms and audiences to maximize your earning potential.
+                <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Global Platform Access</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  International audience tak reach aur multiple platform integration
                 </p>
               </CardContent>
             </Card>
@@ -206,115 +271,108 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-r from-primary/5 via-transparent to-red-600/5">
+      {/* Success Stories Section */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-3 mb-6">
-              <Award className="w-5 h-5 text-primary" />
-              <span className="text-primary font-semibold">Why Choose Us</span>
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center space-x-2 bg-red-100 border border-red-200 rounded-full px-6 py-3 mb-6">
+              <Star className="w-5 h-5 text-red-600" />
+              <span className="text-red-700 font-semibold">Success Stories</span>
             </div>
-            <h2 className="font-heading text-4xl md:text-6xl font-black text-white mb-6">
-              Why Choose Stripechat Agency?
-            </h2>
+            <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">Real Results</h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+              Dekho kaise hamari creators ne apni life transform ki hai
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:rotate-6 transition-transform">
-                  <CheckCircle className="w-6 h-6 text-white" />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
+                  P
                 </div>
-                <div>
-                  <h4 className="font-heading text-xl font-bold text-white mb-2">Transparent Payments</h4>
-                  <p className="text-gray-400 leading-relaxed">
-                    Clear payment structure with no hidden fees or deductions
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:rotate-6 transition-transform">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-heading text-xl font-bold text-white mb-2">Professional Development</h4>
-                  <p className="text-gray-400 leading-relaxed">Continuous training and skill development programs</p>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-gray-900">Priya S.</h4>
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              <div className="flex items-start space-x-4 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:rotate-6 transition-transform">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-heading text-xl font-bold text-white mb-2">Legal Compliance</h4>
-                  <p className="text-gray-400 leading-relaxed">
-                    Full legal protection and compliance with all regulations
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:rotate-6 transition-transform">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-heading text-xl font-bold text-white mb-2">Community Support</h4>
-                  <p className="text-gray-400 leading-relaxed">Join a supportive community of successful creators</p>
-                </div>
-              </div>
+              <p className="text-gray-700 mb-4">
+                "Pehle mujhe lagta tha ki online work safe nahi hai, but STRIPCHAT agency ne complete support diya. Ab
+                main monthly ₹80K+ earn kar rahi hun!"
+              </p>
+              <div className="text-sm text-red-600 font-semibold">Monthly Income: ₹80,000+</div>
             </div>
 
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary/20 to-red-600/20 rounded-3xl p-12 border border-primary/20">
-                <div className="text-center space-y-8">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full mx-auto flex items-center justify-center">
-                    <Sparkles className="w-12 h-12 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-3xl font-bold text-white mb-4">Join Our Success Story</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">
-                      Become part of a thriving community where creators build sustainable careers with professional
-                      support and guidance.
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-6 pt-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-primary mb-1">95%</div>
-                      <div className="text-sm text-gray-400">Success Rate</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-primary mb-1">4.9★</div>
-                      <div className="text-sm text-gray-400">Creator Rating</div>
-                    </div>
+            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
+                  A
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-gray-900">Anita M.</h4>
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
                   </div>
                 </div>
               </div>
+              <p className="text-gray-700 mb-4">
+                "College ke saath-saath work kar sakti hun, flexible timing hai. Training bahut helpful thi, ab
+                confident feel karti hun."
+              </p>
+              <div className="text-sm text-red-600 font-semibold">Monthly Income: ₹45,000+</div>
+            </div>
+
+            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
+                  S
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-gray-900">Sneha K.</h4>
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                "6 months mein hi ₹1.2L monthly reach kar gayi. Agency ka support amazing hai, kabhi akela feel nahi
+                kiya."
+              </p>
+              <div className="text-sm text-red-600 font-semibold">Monthly Income: ₹1,20,000+</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-r from-primary/10 via-red-600/10 to-primary/10">
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-red-600 to-red-700">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full mx-auto flex items-center justify-center mb-6">
-              <Zap className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 bg-white rounded-full mx-auto flex items-center justify-center mb-6">
+              <Zap className="w-10 h-10 text-red-600" />
             </div>
           </div>
 
           <h2 className="font-heading text-4xl md:text-6xl font-black text-white mb-6">
-            Ready to Start Your Creator Journey?
+            Ready to Transform Your Life?
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-            Join hundreds of successful creators who are building their careers with our support
+          <p className="text-xl md:text-2xl text-red-100 mb-12 leading-relaxed">
+            Aaj hi join karo aur apna successful creator journey start karo
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-primary to-red-600 hover:from-primary/90 hover:to-red-600/90 text-white px-10 py-6 text-xl font-bold rounded-full shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-red-600 hover:bg-red-50 px-10 py-6 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
             >
               <a href="https://wa.me/918700955207" target="_blank" rel="noopener noreferrer">
                 Apply Now <ArrowRight className="ml-3 w-6 h-6" />
@@ -324,7 +382,7 @@ export default function HomePage() {
               asChild
               variant="outline"
               size="lg"
-              className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white px-10 py-6 text-xl font-semibold bg-transparent rounded-full backdrop-blur-sm"
+              className="border-2 border-white text-white hover:bg-white/10 hover:border-white px-10 py-6 text-xl font-semibold bg-transparent rounded-full"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>
@@ -332,31 +390,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="bg-black border-t border-primary/20 py-16">
+      {/* Footer */}
+      <footer className="bg-gray-900 border-t border-red-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-2 ring-primary/20">
-                  <Image src="/logo.png" alt="Stripechat Agency Logo" fill className="object-cover" />
+                <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-2 ring-red-200">
+                  <Image src="/logo.png" alt="STRIPCHAT Agency Logo" fill className="object-cover" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-heading font-black text-xl text-white">STRIPECHAT</span>
+                  <span className="font-heading font-black text-xl text-white">STRIPCHAT</span>
                   <span className="font-heading font-semibold text-sm text-gray-400 -mt-1">AGENCY</span>
                 </div>
               </div>
               <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-                Empowering digital creators with professional training, career growth, and income opportunities in the
-                live streaming and content creation industry.
+                Empowering female creators with professional training, career growth, and income opportunities in the
+                digital content creation industry.
               </p>
               <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-primary transition-colors font-medium">
+                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors font-medium">
                   Instagram
                 </a>
-                <a href="#" className="text-gray-400 hover:text-primary transition-colors font-medium">
+                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors font-medium">
                   LinkedIn
                 </a>
-                <a href="#" className="text-gray-400 hover:text-primary transition-colors font-medium">
+                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors font-medium">
                   YouTube
                 </a>
               </div>
@@ -364,16 +423,16 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-white mb-6 text-lg">Quick Links</h4>
               <div className="space-y-3">
-                <Link href="/about" className="block text-gray-400 hover:text-primary transition-colors">
+                <Link href="/about" className="block text-gray-400 hover:text-red-400 transition-colors">
                   About Us
                 </Link>
-                <Link href="/services" className="block text-gray-400 hover:text-primary transition-colors">
+                <Link href="/services" className="block text-gray-400 hover:text-red-400 transition-colors">
                   Services
                 </Link>
-                <Link href="/requirements" className="block text-gray-400 hover:text-primary transition-colors">
+                <Link href="/requirements" className="block text-gray-400 hover:text-red-400 transition-colors">
                   Requirements
                 </Link>
-                <Link href="/faq" className="block text-gray-400 hover:text-primary transition-colors">
+                <Link href="/faq" className="block text-gray-400 hover:text-red-400 transition-colors">
                   FAQ
                 </Link>
               </div>
@@ -381,19 +440,19 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-white mb-6 text-lg">Contact</h4>
               <div className="space-y-3">
-                <a href="tel:+918700955207" className="block text-gray-400 hover:text-primary transition-colors">
+                <a href="tel:+918700955207" className="block text-gray-400 hover:text-red-400 transition-colors">
                   +91 8700955207
                 </a>
                 <a
                   href="mailto:info@stripchatagency.in"
-                  className="block text-gray-400 hover:text-primary transition-colors"
+                  className="block text-gray-400 hover:text-red-400 transition-colors"
                 >
                   info@stripchatagency.in
                 </a>
-                <Link href="/privacy" className="block text-gray-400 hover:text-primary transition-colors">
+                <Link href="/privacy" className="block text-gray-400 hover:text-red-400 transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="block text-gray-400 hover:text-primary transition-colors">
+                <Link href="/terms" className="block text-gray-400 hover:text-red-400 transition-colors">
                   Terms & Conditions
                 </Link>
               </div>
@@ -401,7 +460,7 @@ export default function HomePage() {
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 Stripechat Agency. All rights reserved. | Professional Digital Creator Management
+              © 2024 STRIPCHAT Agency. All rights reserved. | Professional Digital Creator Management
             </p>
           </div>
         </div>

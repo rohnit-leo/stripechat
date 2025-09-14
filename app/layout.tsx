@@ -7,11 +7,11 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Stripechat Agency - Digital Creator Management",
+  title: "STRIPCHAT Agency - Digital Creator Management",
   description:
-    "Empowering digital creators with professional training, career growth, and income opportunities. Join our agency for live streaming, content creation, and audience building support.",
+    "Empowering female digital creators with professional training, career growth, and income opportunities. Join our agency for live streaming, content creation, and audience building support.",
   keywords:
-    "digital creator management, live presenter agency, online content creator support, creator career growth India",
+    "STRIPCHAT agency, digital creator management, female models, live presenter agency, online content creator support, creator career growth India, work from home opportunities",
   generator: "v0.app",
 }
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
