@@ -39,7 +39,7 @@ export default function HomePage() {
           <div className="mb-8">
             <div className="inline-flex items-center space-x-2 bg-red-600/90 backdrop-blur-sm border border-red-500 rounded-full px-6 py-3 mb-6">
               <Sparkles className="w-5 h-5 text-white" />
-              <span className="text-white font-semibold">Professional Creator Management</span>
+              <span className="text-white font-semibold">{"Adult Welcome solution"}</span>
             </div>
             <div className="pb-8"></div>
           </div>
