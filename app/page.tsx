@@ -37,7 +37,7 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 bg-red-600/90 backdrop-blur-sm border border-red-500 rounded-full px-6 py-3 mb-6">
+            <div className="inline-flex items-center space-x-2 bg-red-600/90 backdrop-blur-sm border border-red-500 rounded-full px-6 py-3 mb-6 mt-3.5">
               <Sparkles className="w-5 h-5 text-white" />
               <span className="text-white font-semibold">{"Adult Welcome solution"}</span>
             </div>
@@ -90,12 +90,12 @@ export default function HomePage() {
           </div>
 
           {/* Trust indicators with better contrast */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto py-4">
             <div className="text-center group">
               <div className="text-4xl md:text-5xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform drop-shadow-lg">
                 500+
               </div>
-              <div className="text-gray-200 font-medium drop-shadow">Active Creators</div>
+              <div className="text-gray-200 font-medium drop-shadow py-0">Active Creators</div>
             </div>
             <div className="text-center group">
               <div className="text-4xl md:text-5xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform drop-shadow-lg">
