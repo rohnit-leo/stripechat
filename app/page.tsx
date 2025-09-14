@@ -16,6 +16,9 @@ import {
   DollarSign,
   Calendar,
   MessageCircle,
+  CheckCircle,
+  Award,
+  TrendingUp,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -25,41 +28,39 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-50 via-white to-red-100">
-        {/* Animated Background Elements */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+        {/* Background Image with Stronger Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-red-200/30 rounded-full blur-xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-red-300/20 rounded-full blur-xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-red-100/40 rounded-full blur-lg animate-bounce" />
-          <div className="absolute top-1/3 right-1/4 w-36 h-36 bg-red-200/25 rounded-full blur-xl animate-pulse delay-500" />
+          <Image src="/images/hero-bg.jpg" alt="Professional Creator" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-black/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 bg-red-100 border border-red-200 rounded-full px-6 py-3 mb-6">
-              <Sparkles className="w-5 h-5 text-red-600" />
-              <span className="text-red-700 font-semibold">Professional Creator Management</span>
+            <div className="inline-flex items-center space-x-2 bg-red-600/90 backdrop-blur-sm border border-red-500 rounded-full px-6 py-3 mb-6">
+              <Sparkles className="w-5 h-5 text-white" />
+              <span className="text-white font-semibold">Professional Creator Management</span>
             </div>
-            <div className="pb-6"></div>
+            <div className="pb-8"></div>
           </div>
 
-          <h1 className="font-heading font-black text-5xl md:text-7xl lg:text-8xl text-gray-900 mb-8 text-balance leading-tight">
-            <span className="text-red-600">STRIPCHAT</span>
+          <h1 className="font-heading font-black text-5xl md:text-7xl lg:text-8xl text-white mb-8 text-balance leading-tight drop-shadow-2xl">
+            <span className="text-red-400">STRIPCHAT</span>
             <br />
-            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">Agency</span>
+            <span className="text-red-500">Agency</span>
           </h1>
 
           <div className="space-y-6 mb-12">
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto text-pretty leading-relaxed">
-              Kya aap ek <span className="text-red-600 font-semibold">flexible work-from-home opportunity</span> dhundh
+            <p className="text-xl md:text-2xl lg:text-3xl text-white max-w-4xl mx-auto text-pretty leading-relaxed drop-shadow-2xl">
+              Kya aap ek <span className="text-red-400 font-semibold">flexible work-from-home opportunity</span> dhundh
               rahe ho jahan aapko{" "}
-              <span className="text-red-600 font-semibold">achhi income + freedom + apna schedule</span> mile?
+              <span className="text-red-400 font-semibold">achhi income + freedom + apna schedule</span> mile?
             </p>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-2xl">
               Hum ek STRIPCHAT agency hain aur hum{" "}
-              <span className="text-red-600 font-semibold">female models and creators</span> ko recruit kar rahe hain.
+              <span className="text-red-400 font-semibold">female models and creators</span> ko recruit kar rahe hain.
               Agar aap dedicated aur motivated ho toh yeh aapke liye{" "}
-              <span className="text-red-600 font-semibold">best chance</span> hai.
+              <span className="text-red-400 font-semibold">best chance</span> hai.
             </p>
           </div>
 
@@ -67,7 +68,7 @@ export default function HomePage() {
             <Button
               asChild
               size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white px-10 py-6 text-xl font-bold rounded-full shadow-2xl shadow-red-200 hover:shadow-red-300 transition-all duration-300 transform hover:scale-105"
+              className="bg-red-600 hover:bg-red-700 text-white px-10 py-6 text-xl font-bold rounded-full shadow-2xl shadow-red-900/50 hover:shadow-red-900/70 transition-all duration-300 transform hover:scale-105"
             >
               <a href="https://wa.me/918700955207" target="_blank" rel="noopener noreferrer">
                 <Zap className="mr-3 w-6 h-6" />
@@ -79,7 +80,7 @@ export default function HomePage() {
               asChild
               variant="outline"
               size="lg"
-              className="border-2 border-red-600 text-red-600 hover:bg-red-50 hover:border-red-700 px-10 py-6 text-xl font-semibold bg-transparent rounded-full"
+              className="border-2 border-white text-white hover:bg-white/10 hover:border-white px-10 py-6 text-xl font-semibold bg-transparent rounded-full backdrop-blur-sm"
             >
               <Link href="/about">
                 <Play className="mr-3 w-6 h-6" />
@@ -88,37 +89,36 @@ export default function HomePage() {
             </Button>
           </div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators with better contrast */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform drop-shadow-lg">
                 500+
               </div>
-              <div className="text-gray-600 font-medium">Active Creators</div>
+              <div className="text-gray-200 font-medium drop-shadow">Active Creators</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform drop-shadow-lg">
                 24/7
               </div>
-              <div className="text-gray-600 font-medium">Support Available</div>
+              <div className="text-gray-200 font-medium drop-shadow">Support Available</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform drop-shadow-lg">
                 100%
               </div>
-              <div className="text-gray-600 font-medium">Privacy Protected</div>
+              <div className="text-gray-200 font-medium drop-shadow">Privacy Protected</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl font-black text-red-400 mb-2 group-hover:scale-110 transition-transform drop-shadow-lg">
                 ₹50K+
               </div>
-              <div className="text-gray-600 font-medium">Avg. Monthly Income</div>
+              <div className="text-gray-200 font-medium drop-shadow">Avg. Monthly Income</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -127,12 +127,12 @@ export default function HomePage() {
               <span className="text-red-700 font-semibold">About STRIPCHAT Agency</span>
             </div>
             <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">Humara Mission</h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
               Hum female creators ko empower karte hain digital content creation mein successful career banane ke liye
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="space-y-8">
               <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Professional Training</h3>
@@ -154,33 +154,56 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-red-100 to-red-200 rounded-3xl p-12 text-center">
-              <div className="w-24 h-24 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-8">
-                <Users className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="font-heading text-3xl font-bold text-gray-900 mb-6">Join Our Community</h3>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600 mb-2">500+</div>
-                  <div className="text-sm text-gray-700">Active Models</div>
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="relative h-48 rounded-2xl overflow-hidden">
+                    <Image src="/images/creator-1.jpg" alt="Professional Creator" fill className="object-cover" />
+                  </div>
+                  <div className="relative h-32 rounded-2xl overflow-hidden">
+                    <Image src="/images/creator-2.jpg" alt="Successful Creator" fill className="object-cover" />
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600 mb-2">₹2L+</div>
-                  <div className="text-sm text-gray-700">Highest Monthly</div>
+                <div className="space-y-4 mt-8">
+                  <div className="relative h-32 rounded-2xl overflow-hidden">
+                    <Image src="/images/creator-3.jpg" alt="Happy Creator" fill className="object-cover" />
+                  </div>
+                  <div className="relative h-48 rounded-2xl overflow-hidden">
+                    <Image src="/images/creator-4.jpg" alt="Celebrating Success" fill className="object-cover" />
+                  </div>
                 </div>
               </div>
-              <Button asChild className="bg-red-600 hover:bg-red-700 text-white rounded-full px-8">
-                <a href="https://wa.me/918700955207" target="_blank" rel="noopener noreferrer">
-                  Join Community
-                </a>
-              </Button>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl">
+              <div className="w-16 h-16 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-6">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">Verified Platform</h3>
+              <p className="text-gray-700">Legitimate aur secure platform with proper legal compliance</p>
+            </div>
+            <div className="text-center p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl">
+              <div className="w-16 h-16 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">Industry Recognition</h3>
+              <p className="text-gray-700">Top-rated agency with proven track record of success</p>
+            </div>
+            <div className="text-center p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl">
+              <div className="w-16 h-16 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">Growth Focused</h3>
+              <p className="text-gray-700">Continuous improvement aur career advancement opportunities</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 bg-red-50">
+      {/* Services Section with better contrast */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 bg-white border border-red-200 rounded-full px-6 py-3 mb-6">
@@ -190,7 +213,7 @@ export default function HomePage() {
             <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">
               Hum Kya Provide Karte Hain
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
               Complete support system jo aapko successful creator banane mein help karega
             </p>
           </div>
@@ -202,7 +225,7 @@ export default function HomePage() {
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Complete Onboarding</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Technical setup se lekar audience building tak, har step mein professional guidance
                 </p>
               </CardContent>
@@ -214,7 +237,7 @@ export default function HomePage() {
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Income Optimization</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Proven strategies jo aapki earning potential ko maximize karte hain
                 </p>
               </CardContent>
@@ -226,7 +249,7 @@ export default function HomePage() {
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Privacy & Security</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Complete data protection aur legal compliance ke saath full privacy guarantee
                 </p>
               </CardContent>
@@ -238,7 +261,7 @@ export default function HomePage() {
                   <Calendar className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Flexible Schedule</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Apne time pe work karo, koi fixed hours nahi, complete freedom
                 </p>
               </CardContent>
@@ -250,7 +273,7 @@ export default function HomePage() {
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Personal Mentoring</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Dedicated mentor jo aapki growth mein personally involved rahega
                 </p>
               </CardContent>
@@ -262,7 +285,7 @@ export default function HomePage() {
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Global Platform Access</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   International audience tak reach aur multiple platform integration
                 </p>
               </CardContent>
@@ -271,7 +294,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Success Stories Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -280,16 +302,16 @@ export default function HomePage() {
               <span className="text-red-700 font-semibold">Success Stories</span>
             </div>
             <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">Real Results</h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
               Dekho kaise hamari creators ne apni life transform ki hai
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+            <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-lg">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
-                  P
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image src="/images/creator-5.jpg" alt="Priya S." fill className="object-cover" />
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-gray-900">Priya S.</h4>
@@ -307,10 +329,10 @@ export default function HomePage() {
               <div className="text-sm text-red-600 font-semibold">Monthly Income: ₹80,000+</div>
             </div>
 
-            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+            <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-lg">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
-                  A
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image src="/images/creator-6.jpg" alt="Anita M." fill className="object-cover" />
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-gray-900">Anita M.</h4>
@@ -328,10 +350,10 @@ export default function HomePage() {
               <div className="text-sm text-red-600 font-semibold">Monthly Income: ₹45,000+</div>
             </div>
 
-            <div className="bg-red-50 rounded-2xl p-8 border border-red-100">
+            <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-lg">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
-                  S
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image src="/images/creator-7.jpg" alt="Sneha K." fill className="object-cover" />
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-gray-900">Sneha K.</h4>
@@ -352,7 +374,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="font-heading text-4xl md:text-6xl font-black text-gray-900 mb-6">Kaise Start Kare?</h2>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+              Simple 3-step process mein apna creator journey shuru karo
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-6 text-white text-2xl font-bold">
+                1
+              </div>
+              <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Apply & Verify</h3>
+              <p className="text-gray-700 leading-relaxed">
+                WhatsApp pe contact karo, basic details share karo aur verification process complete karo
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-6 text-white text-2xl font-bold">
+                2
+              </div>
+              <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Training & Setup</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Complete training program attend karo aur technical setup ke saath profile create karo
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-600 rounded-full mx-auto flex items-center justify-center mb-6 text-white text-2xl font-bold">
+                3
+              </div>
+              <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Start Earning</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Go live, audience build karo aur consistent income generate karna start karo
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section with better contrast */}
       <section className="py-24 bg-gradient-to-r from-red-600 to-red-700">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
@@ -390,7 +453,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer with better contrast */}
       <footer className="bg-gray-900 border-t border-red-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12">
@@ -404,18 +467,18 @@ export default function HomePage() {
                   <span className="font-heading font-semibold text-sm text-gray-400 -mt-1">AGENCY</span>
                 </div>
               </div>
-              <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+              <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 Empowering female creators with professional training, career growth, and income opportunities in the
                 digital content creation industry.
               </p>
               <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors font-medium">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
                   Instagram
                 </a>
-                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors font-medium">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
                   LinkedIn
                 </a>
-                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors font-medium">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
                   YouTube
                 </a>
               </div>
@@ -423,16 +486,16 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-white mb-6 text-lg">Quick Links</h4>
               <div className="space-y-3">
-                <Link href="/about" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <Link href="/about" className="block text-gray-300 hover:text-red-400 transition-colors">
                   About Us
                 </Link>
-                <Link href="/services" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <Link href="/services" className="block text-gray-300 hover:text-red-400 transition-colors">
                   Services
                 </Link>
-                <Link href="/requirements" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <Link href="/requirements" className="block text-gray-300 hover:text-red-400 transition-colors">
                   Requirements
                 </Link>
-                <Link href="/faq" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <Link href="/faq" className="block text-gray-300 hover:text-red-400 transition-colors">
                   FAQ
                 </Link>
               </div>
@@ -440,19 +503,19 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-white mb-6 text-lg">Contact</h4>
               <div className="space-y-3">
-                <a href="tel:+918700955207" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <a href="tel:+918700955207" className="block text-gray-300 hover:text-red-400 transition-colors">
                   +91 8700955207
                 </a>
                 <a
                   href="mailto:info@stripchatagency.in"
-                  className="block text-gray-400 hover:text-red-400 transition-colors"
+                  className="block text-gray-300 hover:text-red-400 transition-colors"
                 >
                   info@stripchatagency.in
                 </a>
-                <Link href="/privacy" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <Link href="/privacy" className="block text-gray-300 hover:text-red-400 transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="block text-gray-400 hover:text-red-400 transition-colors">
+                <Link href="/terms" className="block text-gray-300 hover:text-red-400 transition-colors">
                   Terms & Conditions
                 </Link>
               </div>
