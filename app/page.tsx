@@ -32,7 +32,7 @@ export default function HomePage() {
         {/* Background Image with Stronger Overlay */}
         <div className="absolute inset-0 z-0">
           <Image src="/images/hero-bg.jpg" alt="Professional Creator" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
